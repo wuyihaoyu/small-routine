@@ -3,4 +3,52 @@
                            错误：remote: Repository not found
                                git credential-manager uninstall
                                git credential-manager install
-          2.
+          
+          
+          报错：fatal: Authentication failed for 'https://github.com/wuyihaoyu/small-routine.git/'
+          2.git remote set-url origin https://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@github.com/wuyihaoyu/small-routine.git
+
+          配置ssh-key
+          3.git config --global user.name “用户名”  #填写登录GitHub的用户名
+            git config --global user.email “邮箱”   #填写登录GitHub的邮箱
+            git config --global --list
+
+            ssh-keygen -t rsa -C “邮箱” #设置免密登录  直接回车即可（也可以设置）然后复制id_rsa.pub的内容
+
+            网页上打开GitHub，点击头像，进入Setting：找到SSH keys：new ssh key  填写Key：
+
+            ssh -T git@github.com  #测试是否配置成功
+
+
+
+初始化git仓库【已存在项目】
+
+2.git init
+    
+  git add .                           #添加文件
+
+  git commit -m "提交信息"            #提交到本地
+
+  git remote add origin 远端仓库.git  #配置远端仓库
+ 
+  git push -u origin "master"         #push到远程仓库某分支
+
+
+
+3.git log 查看本地提交记录
+
+4.撤销本地commit
+
+   git reset --hard HEAD^      #回退到上次提交并清除本地提交的代码，就是提交栏不会有代码更改的记录（不建议）
+
+   git reset --soft HEAD~1     #回退到上次提交不清除本地提交的代码，能看到提交的修改
+
+
+5.git push 的时候遇到了: OpenSSL SSL_read: Connection was reset, errno 10054
+
+  这是服务器的SSL证书没有经过第三方机构的签署，所以报错。
+  错误原因可能是网络不稳定，连接超时造成的，如果你试了多次还是报这个错误，建议你执行下面的命令
+ 
+  git config --global http.sslVerify "false"
+
+6.
