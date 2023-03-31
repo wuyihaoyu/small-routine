@@ -1,0 +1,6 @@
+1.切换vs code 连接 github账户 
+          1.取消保存的账号密码  
+                           错误：remote: Repository not found
+                               git credential-manager uninstall
+                               git credential-manager install
+          2.
