@@ -5,8 +5,9 @@
                                git credential-manager install
           
           
-          报错：fatal: Authentication failed for 'https://github.com/wuyihaoyu/small-routine.git/'
-          2.git remote set-url origin https://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@github.com/wuyihaoyu/small-routine.git
+           2.报错：fatal: Authentication failed for 'https://github.com/wuyihaoyu/small-routine.git/'
+           配置token
+           git remote set-url origin https://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@github.com/wuyihaoyu/small-routine.git
 
           配置ssh-key
           3.git config --global user.name “用户名”  #填写登录GitHub的用户名

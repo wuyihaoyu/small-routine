@@ -21,13 +21,46 @@
                     上传-审核版本
                     上传-线上版本
 
-8.数据驱动原则  数据绑定 
+8.数据驱动原则  数据绑定
 
-9.常用事件，属性列表    文档   点击 bindtap="事件名称"  /bind:tap
-                             修改data数据  this.setData({})  
+9.常用事件，属性列表   文档   点击 bindtap="事件名称"  /bind:tap
+                            修改data数据  this.setData({})
                             
 10.点击事件传参  属性绑定到dom --> data-参数="4"  回调函数中取event ---> e.target.dataset.参数
 
 11.双向数据绑定  bindinput 输入框输入监听
 
-12.
+12.条件渲染 
+              1.wx:if  wx:elif  wx:else: 条件满足则显示
+              2.hidden 条件满足则隐藏
+
+13.列表渲染  wx:for  默认 index ,item  block组件不会被渲染
+
+14.配置文件解读
+            app.json 配置文件  pages  windows  tabBar
+            页面配置文件     
+
+15.数据请求   wx.request({
+                          url:"",
+                          method:"GET", 
+                          success:(res)=>{
+
+                          },
+                          fail:(err)=>{
+                            
+                          }
+                        })
+              微信小程序请求不存在跨域，不是ajax,不依赖于XMLrequestHTML,宿主是微信客户端
+              限制：只能用https的域名，要添加url到白名单
+
+16.异步编程新方案  new promise(()=>{})  .then()  .catch()
+
+17.异步升级       async await   简化promise的操作，使promise的异步操作拥有同步写法
+
+18.小程序页面生命周期 / 组件的生命周期     页面生命周期 onLoad:function(){}
+                                                     onReady:function(){}
+                                                     onShow:function(){}
+                                                     onHide:function(){}
+                                                     onUnload:function(){}
+              
+               
