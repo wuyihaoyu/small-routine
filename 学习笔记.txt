@@ -58,9 +58,22 @@
 17.异步升级       async await   简化promise的操作，使promise的异步操作拥有同步写法
 
 18.小程序页面生命周期 / 组件的生命周期     页面生命周期 onLoad:function(){}
-                                                     onReady:function(){}
+                                                     onReady:function(){}---请求服务端获取数据
                                                      onShow:function(){}
                                                      onHide:function(){}
                                                      onUnload:function(){}
+                                                    
+19.组件生命周期         created   lifetimes     方法则放在methods 
+                      attached
+                      detached
+
+20.数据监听器          observers:{
+                                  key:value        key:监听的数据，value:数据变化时，调用的函数
+                                 }
+
+21.组件之间的关系与通讯  父子     兄弟 
+
+22.组件的插槽    定义插槽         定义单一插槽、定义多个插槽
+                 使用插槽         使用单一插槽、使用多个插槽 
               
                
